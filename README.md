@@ -40,7 +40,7 @@ Here are some example license plate images included in the repository:
 
 | Example 1                 | Example 2                 | Example 3                 |
 | ------------------------- | ------------------------- | ------------------------- |
-| ![ex1](data/car_image.jpg) | ![ex2](data/P9170019.jpg) | ![ex3](data/P9170033.jpg) |
+| ![ex1]([data/car_image.jpg](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.JPG)) | ![ex2]([data/](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/P9170019.JPG) | ![ex3]([data/](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/P9170033.JPG) |
 
 These images contain different lighting conditions, contrast levels, and backgrounds to test robustness.
 
@@ -178,7 +178,7 @@ ans =
 
 | Original                      | Plate Crop                  | Final Binary + Boxes          || Whole Process          |
 | ----------------------------- | --------------------------- | ----------------------------- || ----------------------------- |
-| ![orig](data/car_image.jpg) | ![plate](results/SK314CK-crop.png) | ![seg](results/SK314CK-Binary+Boxes.png) |![whole](results/SK314CK-whole.png) |
+| ![orig]([data/](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.jpg) | ![plate](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-crop.png) | ![seg](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-Binary+Boxes.png) |![whole](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-whole.png) |
 
 ---
 
