@@ -198,5 +198,13 @@ This project corresponds to the **Category 3 – License Plate Recognition** tas
 * Task description: [https://bognargergo.web.elte.hu/mscsignal/homeworks/](https://bognargergo.web.elte.hu/mscsignal/homeworks/)
 * Dataset: [Test Images](http://www.zemris.fer.hr/projects/LicensePlates/english/results.shtml)
 
+## 📜 License
+
+This project uses the character template file `imgfildata.mat` created by Nishant Kumar (2016) under the BSD License. 
+
+Redistribution and use of the template file must retain the copyright notice and BSD conditions. The MATLAB code in this repository is released for educational purposes and is provided as-is.
+
+The BSD license for the character templates is included in `templates/LICENSE-Kumar.txt`.
+
 ---
 
