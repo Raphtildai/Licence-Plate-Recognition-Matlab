@@ -178,7 +178,7 @@ ans =
 
 | Original                      | Plate Crop                  | Final Binary + Boxes          |
 | ----------------------------- | --------------------------- | ----------------------------- |
-| ![orig](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.jpg) | ![plate](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-crop.png) | ![seg](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-Binary+Boxes.png) |
+| ![orig](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.JPG) | ![plate](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-crop.png) | ![seg](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-Binary+Boxes.png) |
 
 ---
 
