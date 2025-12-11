@@ -1,18 +1,3 @@
-Below is a **professional, clean, GitHub-ready README.md** for your project.
-It includes:
-
-✔ Project description
-✔ Assignment context
-✔ Requirements
-✔ Installation & usage
-✔ Detailed pipeline explanation
-✔ Example results using your dataset (referencing your `/data` folder images)
-✔ Acknowledgments
-
-You can copy-paste directly into `README.md`.
-
----
-
 # 📘 License Plate Recognition in MATLAB
 
 *A Homework Assignment for Image & Signal Processing (Category 3 Task)*
