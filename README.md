@@ -40,7 +40,7 @@ Here are some example license plate images included in the repository:
 
 | Example 1                 | Example 2                 | Example 3                 |
 | ------------------------- | ------------------------- | ------------------------- |
-| ![1st Car](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.JPG)) | ![2nd Car](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/P9170019.JPG) | ![3rd Car](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/P9170033.JPG) |
+| ![1st Car](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.JPG) | ![2nd Car](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/P9170019.JPG) | ![3rd Car](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/P9170033.JPG) |
 
 These images contain different lighting conditions, contrast levels, and backgrounds to test robustness.
 
