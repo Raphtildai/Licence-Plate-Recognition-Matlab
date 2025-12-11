@@ -180,6 +180,8 @@ ans =
 | ----------------------------- | --------------------------- | ----------------------------- |
 | ![orig](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.JPG) | ![plate](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-crop.png) | ![seg](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-Binary+Boxes.png) |
 
+## Entire Process Generation
+![Whole Process](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-whole.png)
 ---
 
 ## 📄 Assignment Details (ELTE – Homework A3)
