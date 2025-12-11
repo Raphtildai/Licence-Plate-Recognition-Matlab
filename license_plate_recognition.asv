@@ -309,7 +309,7 @@ function [recognized_chars, time_taken] = license_plate_recognition()
                     % 1. Small area (was filtered out by area < 150)
                     if area_comp < 150 
                         
-                        % 2. Is it a horizontal dash? 
+                        % 2. Is it a horizontal dash? (High aspect/eccentricity)
                         aspect_comp = w_comp / h_comp;
                         if aspect_comp > 3.0 || ecc_comp > 0.95 % long/flat component
                             
@@ -328,7 +328,7 @@ function [recognized_chars, time_taken] = license_plate_recognition()
                     end
                 end
             end
-            if dash_found, break; end % Exitting the outer loop after inserting a dash
+            if dash_found, break; end % Exit the outer loop after inserting a dash
         end
     end
     

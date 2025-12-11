@@ -55,6 +55,9 @@ The processing pipeline follows these steps:
 * Load `imgfildata.mat`
 * Convert to grayscale, binarize, and resize to a uniform **42×24** template size
 
+![Original Image](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-original.png)
+
+
 ### **2. Load Image & Convert to Grayscale**
 
 * Read photo using `uigetfile`
@@ -65,14 +68,21 @@ The processing pipeline follows these steps:
 * Apply CLAHE (`adapthisteq`)
 * Improves visibility of plate edges
 
+![Contrast Enhancement](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-contrast-enhanced.png)
+
 ### **4. Sobel Edge Detection**
 
 * Generate an edge map
 * Enhances horizontal and vertical plate boundaries
 
+
+![Edges](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-edges.png)
+
 ### **5. Morphological Closing**
 
 * Connect fragmented edges using `strel` + `imclose`
+
+![Morphological Closing](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-closing.png)
 
 ### **6. License Plate Region Detection**
 
@@ -86,9 +96,14 @@ The processing pipeline follows these steps:
 
 * Select the best candidate bounding box
 
+![Plate Region Detection](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-plate-detected.png)
+
 ### **7. Extract Plate with Generous Padding**
 
 Ensures the crop includes the full plate area without cutting letters.
+
+
+![Extracted Plate](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-extracted-plate.png)
 
 ### **8. Binarization and Noise Cleaning**
 
@@ -96,6 +111,9 @@ Ensures the crop includes the full plate area without cutting letters.
 * Border removal (`imclearborder`)
 * Dilation/erosion to separate characters
 * Small noise removal (`bwareaopen`)
+
+
+![Binarized Plate](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-binarized-plate.png)
 
 ### **9. Character Segmentation**
 
@@ -107,12 +125,17 @@ Ensures the crop includes the full plate area without cutting letters.
   * Croatian emblem filtering
 * Sort bounding boxes left-to-right
 
+
+![Character Segmentation](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-SK314CK-binarized+characters-bounding.png)
+
 ### **10. Character Recognition**
 
 * Resize each character → match template size
 * Use normalized correlation (`corr2`)
 * Best match above confidence threshold ⇒ accepted
 * Otherwise ⇒ `?`
+
+![Recognized characters](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-recognized-characters.png)
 
 ### **11. Save Results & Visualize**
 
@@ -124,6 +147,7 @@ Ensures the crop includes the full plate area without cutting letters.
   * extracted plate
   * cleaned binary image with character boxes
 
+![Results](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-whole.png)
 ---
 
 ## ▶️ Running the Program
@@ -153,23 +177,42 @@ Ensure that `imgfildata.mat` is in the templates directory.
 === 11. FINAL RESULT ===
 Loaded character database with 62 templates
 
+=== ALL DETECTED COMPONENTS ===
+Component 1: x=110.5, w=28.0, h=53.0, aspect=0.53, area=713
+Component 2: x=145.5, w=29.0, h=52.0, aspect=0.56, area=754
+Component 3: x=189.5, w=20.0, h=8.0, aspect=2.50, area=87
+Component 4: x=222.5, w=27.0, h=52.0, aspect=0.52, area=605
+Component 5: x=266.5, w=10.0, h=50.0, aspect=0.20, area=336
+Component 6: x=292.5, w=29.0, h=52.0, aspect=0.56, area=677
+Component 7: x=329.5, w=10.0, h=6.0, aspect=1.67, area=60
+Component 8: x=347.5, w=29.0, h=54.0, aspect=0.54, area=610
+Component 9: x=382.5, w=30.0, h=53.0, aspect=0.57, area=844
+Median character height: 52.0
+
+=== FINAL SEGMENTED CHARACTERS ===
+Char 1: x=110.5, w=28.0, h=53.0
+Char 2: x=145.5, w=29.0, h=52.0
+Char 3: x=222.5, w=27.0, h=52.0
+Char 4: x=266.5, w=10.0, h=50.0
+Char 5: x=292.5, w=29.0, h=52.0
+Char 6: x=347.5, w=29.0, h=54.0
+Char 7: x=382.5, w=30.0, h=53.0
+
 === 10. CHARACTER RECOGNITION ===
-Char 1: S (confidence: 0.396) - MATCH
-Char 2: K (confidence: 0.406) - MATCH
-Char 3: 3 (confidence: 0.484) - MATCH
-Char 4: 4 (confidence: 0.380) - MATCH
-Char 5: 4 (confidence: 0.487) - MATCH
-Char 6: C (confidence: 0.444) - MATCH
-Char 7: K (confidence: 0.406) - MATCH
+Char 1: S (confidence: 0.386) - MATCH
+Char 2: K (confidence: 0.387) - MATCH
+Char 3: 3 (confidence: 0.519) - MATCH
+Char 4: j (confidence: 0.416) - MATCH
+Char 5: 4 (confidence: 0.458) - MATCH
+Char 6: C (confidence: 0.465) - MATCH
+Char 7: K (confidence: 0.392) - MATCH
 
 === 11. FINAL RESULT ===
-Recognized License Plate: SK344CK
-Total execution time: 6.928 seconds
+Recognized License Plate: SK3j4CK
+Total execution time: 6.497 seconds
 Results saved to number_Plate_Optimized.txt
 
-ans =
-
-    'SK344CK'
+ans = 'SK3j4CK'
 ```
 
 ### Example Visualization
@@ -179,9 +222,6 @@ ans =
 | Original                      | Plate Crop                  | Final Binary + Boxes          |
 | ----------------------------- | --------------------------- | ----------------------------- |
 | ![orig](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/data/car_image.JPG) | ![plate](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-crop.png) | ![seg](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-Binary+Boxes.png) |
-
-## Entire Process Generation
-![Whole Process](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-whole.png)
 ---
 
 ## 📄 Assignment Details (ELTE – Homework A3)
