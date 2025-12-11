@@ -126,7 +126,7 @@ Ensures the crop includes the full plate area without cutting letters.
 * Sort bounding boxes left-to-right
 
 
-![Character Segmentation](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-SK314CK-binarized-characters-bounding.png)
+![Character Segmentation](https://github.com/Raphtildai/Licence-Plate-Recognition-Matlab/blob/master/results/SK314CK-binarized-characters-bounding.png)
 
 ### **10. Character Recognition**
 
